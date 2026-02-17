@@ -1,0 +1,22 @@
+[package]
+name = "frec"
+version = "0.1.0"
+edition = "2024"
+authors = ["m1dsolo <yx1053532442@gmail.com>"]
+description = "A frecency-based tool for managing file weights"
+license = "MIT"
+repository = "https://github.com/m1dsolo/frec"
+readme = "README.md"
+keywords = ["frecency", "cli", "terminal", "zoxide"]
+categories = ["command-line-utilities"]
+
+[dependencies]
+clap = { version = "4.5", features = ["derive"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+dirs = "6.0"
+
+[profile.release]
+strip = true
+lto = true
+codegen-units = 1
